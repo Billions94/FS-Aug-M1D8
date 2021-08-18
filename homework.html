@@ -10,7 +10,7 @@
           //
         //};
         function changeTitle(){
-            let newTitle = document.querySelector("h1")
+            const newTitle = document.querySelector("h1")
             newTitle.innerHTML = "God is good "
         }
 
@@ -24,7 +24,7 @@
         // };
 
         function addClassToTitle(){
-            let addClass = document.querySelector("h1")
+            const addClass = document.querySelector("h1")
             addClass.className = "selector"
         }
   
@@ -36,7 +36,7 @@
         //   //
         // };
         function changePcontent(){
-            let changeParagraph = document.querySelector("#paragraph")
+            const changeParagraph = document.querySelector("#paragraph")
             changeParagraph.innerHTML = "This got me thinking"
         }
 
@@ -44,57 +44,69 @@
         Write a function for changing the destination of every link to https://www.google.com
         */
   
-        const changeUrls = function () {
-          //
+          function changeUrls() {
+          const fakeUrl = document.querySelector("#url")
+             fakeUrl.linkTarget = "http://www.google.com"
         };
   
         /* EXERCISE 5
          Write a function for adding a new item in the second list.
          */
   
-        const addToTheSecond = function (content) {
-          //
-        };
-  
+        // const addToTheSecond = function (content) {
+        //   //
+        // };
+         function addNewListItem(){
+            const secondList = document.getElementById('secondList')
+           const newElement = document.createElement('li')
+        
+           newElement.innerText='4th'
+         secondList.appendChild(newElement)
+         
+         }
+
         /* EXERCISE 6
         Write a function for adding a second paragraph to the div.
         */
-  
-        const addParagraph = function (content) {
-          //
-        };
+        function addP(){
+        const firstDiv = div[0]
+        const newElement = document.createElement('p')
+        firstDiv.appendChild(newElement)
+        newElement.innerText="God"
+        }
   
         /* EXERCISE 7
         Write a function for making the first UL disappear.
         */
-  
-        const firstUlDisappear = function () {
-          //
-        };
+        function makeUlDisappear(){
+        const firstList = document.getElementById('firstList')
+        firstList.remove()
+        }
+        
   
         /* EXERCISE 8
         Write a function for making the background of every UL green.
         */
+         function ulBackground() {
+         const uls = document.getElementsByTagName('ul')
+         for (let i = 0; i<uls.length; i++){
+         uls[i].style.background = 'green'
+         }
+        }
   
-        const paintItGreen = function () {
-          //
-        };
+        
   
         /* EXERCISE 9
         Make the heading of the page change color every time the user clicks on it.
         */
   
-        const makeItClickable = function () {
-          //
-        };
+        
   
         /* EXERCISE 10
         Change the footer text with something else when the user clicks on it.
         */
   
-        const changeFooterText = function () {
-          //
-        };
+        
   
         /* EXERCISE 11
         Attach an event listener to the input field in the page for console logging its value just after any keystroke.
@@ -126,6 +138,9 @@
 
         
         <button onclick="addClassToTitle()" >Add Class</button>
+        <button onclick="addNewListItem()" >Add New List</button>
+        <button onclick="makeUlDisappear()" >Make UL vanish</button>
+        <button onclick="addP()">Add Paragraph</button>
 
       <header>
         <h1 onclick="changeTitle()" >This is the title of the page</h1>
@@ -136,7 +151,7 @@
         <hr />
   
         <ul id="firstList">
-          <li>1st</li>
+          <li onclick="ulBackground()" >1st</li>
           <li>2nd</li>
           <li>3rd</li>
         </ul>
@@ -147,7 +162,7 @@
           <li>3rd</li>
         </ul>
   
-        <a href="strive.school">This link goes to Strive School</a>
+        <a href="strive.school" id="url" >This link goes to Strive School</a>
   
         <div>
           <p onclick="changePcontent()"  id="paragraph" >This text is just for the exercise</p>
