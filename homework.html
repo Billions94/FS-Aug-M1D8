@@ -68,10 +68,10 @@
         Write a function for adding a second paragraph to the div.
         */
         function addP(){
-        const firstDiv = div[0]
+        const firstDiv = document.querySelector("#paragraph")
         const newElement = document.createElement('p')
         firstDiv.appendChild(newElement)
-        newElement.innerText="God"
+        newElement.innerHTML = "I am Apex"
         }
   
         /* EXERCISE 7
@@ -119,21 +119,28 @@
         Attach an event listener to the input field in the page for console logging its value just after any keystroke.
         */
   
-        const inputField = document.getElementById("input-field");
-        // ...
-  
+         const inputField = document.getElementById("input-field");
+         inputField.addEventListener("keypress",alert)
+         
         /* EXERCISE 12
         Create a new welcome alert message when the page successfully loads.
         */
   
-        window.onload = function () {
+        //  window.onload = function () {
+        //  window.addEventListener("load",alert)
+        //   alert("Welcome people!")
             
-          //
-        };
+          
+        //    };
   
         /* EXERCISE 13
         Use HTML5 tags to divide the content of the page in a more semantic way.
         */
+
+     /* function doingBothThings() {
+      changeTitle();
+     heading()    
+      }*/  // very useful tip from Luiz
 
       </script>
   
@@ -150,11 +157,10 @@
         <button onclick="addNewListItem()" >Add New List</button>
         <button onclick="makeUlDisappear()" >Make UL vanish</button>
         <button onclick="addP()">Add Paragraph</button>
-        <button onclick="heading()">Touch me</button>
         <button onclick="changeUrls()">Change links</button>
 
       <header>
-        <h1 onclick="changeTitle()" >This is the title of the page</h1>
+        <h1 style="cursor: pointer;" onclick="changeTitle();heading()" >This is the title of the page</h1>
         <h2>This is the subtitle of the page</h2>
       </header>
   
