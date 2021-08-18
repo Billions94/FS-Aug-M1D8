@@ -105,7 +105,12 @@
         /* EXERCISE 10
         Change the footer text with something else when the user clicks on it.
         */
-  
+        function changeFooterText() {
+        const footer = document.querySelector('footer')
+
+        footer.innerText="I ain't Freddy Son"
+        
+        }
         
   
         /* EXERCISE 11
@@ -120,12 +125,14 @@
         */
   
         window.onload = function () {
+            
           //
         };
   
         /* EXERCISE 13
         Use HTML5 tags to divide the content of the page in a more semantic way.
         */
+
       </script>
   
       <style>
@@ -178,7 +185,7 @@
       </main>
   
       <footer>
-        <p>And this text is just for the exercise too!</p>
+        <p onclick="changeFooterText()" >And this text is just for the exercise too!</p>
       </footer>
     </body>
   </html>
