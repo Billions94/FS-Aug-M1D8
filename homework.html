@@ -6,26 +6,40 @@
         Write a function for changing the title of the document in something else.
         */
   
-        const changeTitle = function (newTitle) {
+        //const changeTitle = function (newTitle) {
           //
-        };
-  
+        //};
+        function changeTitle(){
+            let newTitle = document.querySelector("h1")
+            newTitle.innerHTML = "God is good "
+        }
+
+        
         /* EXERCISE 2
         Write a function for changing the class of the title of the page in "myHeading".
         */
   
-        const addClassToTitle = function () {
-          //
-        };
+        // const addClassToTitle = function () {
+        //   //
+        // };
+
+        function addClassToTitle(){
+            let addClass = document.querySelector("h1")
+            addClass.className = "selector"
+        }
   
         /* EXERCISE 3
         Write a function for changing the text of only the p which are children of a div.
         */
   
-        const changePcontent = function () {
-          //
-        };
-  
+        // const changePcontent = function () {
+        //   //
+        // };
+        function changePcontent(){
+            let changeParagraph = document.querySelector("#paragraph")
+            changeParagraph.innerHTML = "This got me thinking"
+        }
+
         /* EXERCISE 4
         Write a function for changing the destination of every link to https://www.google.com
         */
@@ -109,8 +123,12 @@
       </style>
     </head>
     <body>
+
+        
+        <button onclick="addClassToTitle()" >Add Class</button>
+
       <header>
-        <h1>This is the title of the page</h1>
+        <h1 onclick="changeTitle()" >This is the title of the page</h1>
         <h2>This is the subtitle of the page</h2>
       </header>
   
@@ -132,7 +150,7 @@
         <a href="strive.school">This link goes to Strive School</a>
   
         <div>
-          <p>This text is just for the exercise</p>
+          <p onclick="changePcontent()"  id="paragraph" >This text is just for the exercise</p>
         </div>
   
         <div>
