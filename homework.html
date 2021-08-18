@@ -44,9 +44,8 @@
         Write a function for changing the destination of every link to https://www.google.com
         */
   
-          function changeUrls() {
-          const fakeUrl = document.querySelector("#url")
-             fakeUrl.linkTarget = "http://www.google.com"
+        function changeUrls() {
+        document.querySelector("a").href = "https://www.google.com/"
         };
   
         /* EXERCISE 5
@@ -99,7 +98,10 @@
         /* EXERCISE 9
         Make the heading of the page change color every time the user clicks on it.
         */
-  
+        function heading(){
+            const newHeaderColor = document.querySelector("h1")
+            newHeaderColor.style.color = "blue"
+        }
         
   
         /* EXERCISE 10
@@ -148,6 +150,8 @@
         <button onclick="addNewListItem()" >Add New List</button>
         <button onclick="makeUlDisappear()" >Make UL vanish</button>
         <button onclick="addP()">Add Paragraph</button>
+        <button onclick="heading()">Touch me</button>
+        <button onclick="changeUrls()">Change links</button>
 
       <header>
         <h1 onclick="changeTitle()" >This is the title of the page</h1>
@@ -169,7 +173,7 @@
           <li>3rd</li>
         </ul>
   
-        <a href="strive.school" id="url" >This link goes to Strive School</a>
+        <a href="strive.school" >This link goes to Strive School</a>
   
         <div>
           <p onclick="changePcontent()"  id="paragraph" >This text is just for the exercise</p>
